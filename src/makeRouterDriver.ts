@@ -1,6 +1,7 @@
 import {StreamAdapter} from '@cycle/base';
 import {makeHistoryDriver} from '@cycle/history';
-import {History, HistoryDriverOptions} from '@cycle/history/lib/interfaces';
+import {History} from '@cycle/history/lib/interfaces';
+import RouterDriverOptions from './RouterDriverOptions';
 
 import {RouterSource} from './RouterSource';
 
@@ -11,7 +12,7 @@ import {RouterSource} from './RouterSource';
  * @method makeRouterDriver
  * @return {routerDriver} The router driver function
  */
-function makeRouterDriver(history: History, options?: HistoryDriverOptions) {
+function makeRouterDriver(history: History, options?: RouterDriverOptions) {
   const historyDriver = makeHistoryDriver(history, options);
   /**
    * The actual router driver.
@@ -25,7 +26,7 @@ function makeRouterDriver(history: History, options?: HistoryDriverOptions) {
    */
   return function routerDriver(sink$: any, runSA: StreamAdapter) {
     const history$ = historyDriver(sink$, runSA);
-    return new RouterSource(history$, [], history$.createHref);
+    return new RouterSource(history$, [], history$.createHref, options);
   };
 }
 
