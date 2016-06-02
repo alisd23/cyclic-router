@@ -48,9 +48,6 @@
     "xstream": "^2.0.2"
   },
   "config": {
-    "ghooks": {
-      "commit-msg": "node ./node_modules/.bin/validate-commit-msg"
-    }
   },
   "scripts": {
     "lint": "tslint -c tslint.json src/*.ts src/**/*.ts",

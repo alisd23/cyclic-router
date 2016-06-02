@@ -1,6 +1,6 @@
 import {Location, Pathname} from '@cycle/history/lib/interfaces';
-import switchPath from 'switch-path';
 import RouterDriverOptions from './RouterDriverOptions';
+import switchPath from 'switch-path';
 
 import * as util from './util';
 

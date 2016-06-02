@@ -2,7 +2,6 @@ import {StreamAdapter} from '@cycle/base';
 import {makeHistoryDriver} from '@cycle/history';
 import {History} from '@cycle/history/lib/interfaces';
 import RouterDriverOptions from './RouterDriverOptions';
-
 import {RouterSource} from './RouterSource';
 
 /**
