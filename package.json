@@ -1,6 +1,6 @@
 {
-  "name": "cyclic-router",
-  "version": "2.0.0",
+  "name": "@findash/cyclic-router-patch",
+  "version": "0.0.1",
   "description": "The standard history driver for Cycle.js",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/TylorS/cyclic-router#readme",
   "dependencies": {
-    "@cycle/history": "^3.0.4",
+    "@cycle/history": "3.1.0",
     "history": "^2.1.0",
     "switch-path": "^1.1.6"
   },
@@ -47,8 +47,7 @@
     "validate-commit-message": "^3.0.1",
     "xstream": "^2.0.2"
   },
-  "config": {
-  },
+  "config": {},
   "scripts": {
     "lint": "tslint -c tslint.json src/*.ts src/**/*.ts",
     "test-node": "mocha -r babel-register test/index.js",
